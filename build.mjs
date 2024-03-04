@@ -61,6 +61,7 @@ const ES_BUILD_OPTIONS = {
     "buffer",
     "xml",
     "net",
+    "url"
   ],
 };
 
@@ -514,7 +515,7 @@ async function buildLibrary() {
     entryPoints: testEntryPoints,
     external: [
       ...ES_BUILD_OPTIONS.external,
-      "@aws-sdk", "@smithy", "uuid"
+      "@aws-sdk", "@smithy" 
     ],
   });
 }
