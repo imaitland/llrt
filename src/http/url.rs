@@ -126,12 +126,12 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn origin(&self) -> String {
+    pub fn origin(&self) -> String {
         format!("{}://{}", &self.protocol, &self.host)
     }
 
     #[qjs(get)]
-    fn protocol(&self) -> String {
+    pub fn protocol(&self) -> String {
         format!("{}:", &self.protocol)
     }
 
@@ -146,7 +146,7 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn port(&self) -> String {
+    pub fn port(&self) -> String {
         self.port.clone()
     }
 
@@ -158,7 +158,7 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn hostname(&self) -> String {
+    pub fn hostname(&self) -> String {
         self.hostname.clone()
     }
 
@@ -169,7 +169,7 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn host(&self) -> String {
+    pub fn host(&self) -> String {
         self.host.clone()
     }
 
@@ -188,7 +188,7 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn pathname(&self) -> String {
+    pub fn pathname(&self) -> String {
         self.pathname.clone()
     }
 
@@ -199,7 +199,7 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn search(&self) -> String {
+    pub fn search(&self) -> String {
         search_params_to_string(&self.search_params)
     }
 
@@ -212,7 +212,7 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn hash(&self) -> String {
+    pub fn hash(&self) -> String {
         self.hash.clone()
     }
 
@@ -223,7 +223,7 @@ impl<'js> URL<'js> {
         pound_hash
     }
     #[qjs(get)]
-    fn username(&self) -> String {
+    pub fn username(&self) -> String {
         self.username.clone()
     }
 
@@ -234,7 +234,7 @@ impl<'js> URL<'js> {
     }
 
     #[qjs(get)]
-    fn password(&self) -> String {
+    pub fn password(&self) -> String {
         self.password.clone()
     }
 
